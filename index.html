@@ -9,27 +9,29 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #f4f4f4;
+            background-color: #121212;
+            color: white;
         }
         .container {
             max-width: 600px;
             margin: auto;
-            background: white;
+            background: #1f1f1f;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
         }
         img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
+            animation: moveImage 3s ease-in-out infinite;
         }
         h1 {
-            color: #333;
+            color: #f4f4f4;
         }
         p {
-            color: #666;
+            color: #ccc;
         }
         a {
             display: inline-block;
@@ -40,15 +42,42 @@
             color: white;
             border-radius: 5px;
         }
+        @keyframes moveImage {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+        .typewriter {
+            display: inline-block;
+            font-size: 1.5em;
+            border-right: 3px solid #fff;
+            padding-right: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="Mehedi Github.jpg" alt="Mehedi Hasan">
         <h1>Mehedi Hasan</h1>
-        <p>Digital Marketer | Facebook Ads Expert | SEO Enthusiast</p>
-        <p>I help brands grow with data-driven marketing strategies.</p>
+        <p class="typewriter" id="typed-text"></p>
+        <p>I help businesses grow through digital marketing strategies, including paid ads, SEO, and data analysis.</p>
         <a href="https://www.linkedin.com/in/mehedihasan-tutul/" target="_blank">Connect on LinkedIn</a>
     </div>
+
+    <script>
+        // Typewriter effect for the name
+        const text = "Digital Marketer | Facebook Ads Expert | SEO Enthusiast";
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typed-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        typeWriter();
+    </script>
 </body>
 </html>

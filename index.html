@@ -3,144 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Hasan - Digital Marketer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #121212;
-            color: white;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: #1f1f1f;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-        }
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            animation: moveImage 3s ease-in-out infinite;
-        }
-        h1 {
-            color: #f4f4f4;
-        }
-        p {
-            color: #ccc;
-        }
-        a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            text-decoration: none;
-            background: #0073b1;
-            color: white;
-            border-radius: 5px;
-        }
-        @keyframes moveImage {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
-            100% { transform: translateX(0); }
-        }
-        .typewriter {
-            display: inline-block;
-            font-size: 1.5em;
-            border-right: 3px solid #fff;
-            padding-right: 5px;
-        }
-    </style>
-    <nav class="navbar" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">
-                    <span class="logo-text">Mehedi Hasan<span class="logo-highlight">
-                </a>
-            </div>
-
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">
-                    <i class="fas fa-home"></i>
-                    <span>Home</span>
-                </a>
-                <a href="#about" class="nav-link">
-                    <i class="fas fa-user"></i>
-                    <span>About</span>
-                </a>
-                <a href="#skills" class="nav-link">
-                    <i class="fas fa-code"></i>
-                    <span>Skills</span> 
-                </a>
-                <a href="#projects" class="nav-link">
-                    <i class="fas fa-project-diagram"></i>
-                    <span>Projects</span>
-                </a>
-                <a href="#contact" class="nav-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
-
-                <!-- Contact Button -->
-                <!-- <a href="#contact" class="nav-btn">
-                    Let's Talk
-                    <i class="fas fa-arrow-right"></i>
-                </a> -->
-
-                <!-- Mobile Menu Toggle -->
-                <div class="nav-toggle">
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <title>Mehedi Hasan - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="Mehedi Github.jpg" alt="Mehedi Hasan">
-        <h1>Mehedi Hasan</h1>
-        <p class="typewriter" id="typed-text"></p>
-        <p>I am a passionate and results-driven digital marketer with expertise in Facebook Ads and a strong foundation in content management and SEO. Over the years, I've honed my skills in understanding audience behavior, leveraging social media algorithms, and creating compelling content that drives engagement. I specialize in running effective Facebook ad campaigns and utilizing data-driven insights to optimize performance and achieve business goals.</p>
-        <a href="https://www.linkedin.com/in/mehedihasan-tutul/" target="_blank">Connect on LinkedIn</a>
-        <a href="https://www.facebook.com/mehedi.vau.75685/" target="_blank" class="social-btn">Connect on Facebook</a>
-
-<style>
-    .social-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        text-decoration: none;
-        background: #00008B; /* Dark Blue - Change to any color you want */
-        color: white;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .social-btn:hover {
-        background: #FFCC00; /* Hover color - Change as needed */
-    }
-</style>
-    </div>
-<body>
-    <script>
-        // Typewriter effect for the name
-        const text = "Digital Marketer | Facebook Ads Expert | SEO Enthusiast";
-        let index = 0;
-
-        function typeWriter() {
-            if (index < text.length) {
-                document.getElementById("typed-text").innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-
-        typeWriter();
-    </script>
+    <header>
+        <nav>
+            <div class="logo">Mehedi<span>Hasan</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Hey, I'm <span>Mehedi</span></h1>
+            <p>Digital Marketer & Facebook Ads Expert | SEO Enthusiast</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="home-image">
+            <img src="profile.jpg" alt="Mehedi Hasan">
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About <span>Me</span></h2>
+        <p>I help businesses grow through data-driven digital marketing strategies.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill">Facebook Ads</div>
+            <div class="skill">SEO</div>
+            <div class="skill">Google Ads</div>
+            <div class="skill">Content Marketing</div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>My <span>Projects</span></h2>
+        <p>Coming soon...</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <p>Email: mehedi@example.com</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mehedi Hasan | All Rights Reserved</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

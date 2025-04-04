@@ -63,3 +63,106 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #007BFF;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.home-content h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+.home-content span {
+    color: #007BFF;
+}
+
+.home-content p {
+    font-size: 20px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007BFF;
+    color: #fff;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
